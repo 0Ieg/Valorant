@@ -4,9 +4,15 @@
   margin: 0;
   overflow: hidden;
 }
+a{
+  text-decoration: none;
+}
 
 :root{
   --color-black: #1F2326;
-  --color-gray: #EFEFEF;
+  --color-gray: #505155;
+  --color-dark-gray: #292C31;
+  --color-light-gray: #EFEFEF;
   --color-red: #FF4656;
+  --color-white: #F8F8F8;
 }
