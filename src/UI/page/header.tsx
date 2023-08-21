@@ -91,6 +91,7 @@ justify-content: space-between;
   }
   .dropdown__list{
     position: absolute;
+    z-index: 5;
     background-color: var(--color-white);
     width: 105px;
     border-radius: 5px;
