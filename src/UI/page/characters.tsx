@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { styled } from "styled-components";
 import heroImage from "../../BLL/images/Art_1.png"
-import { Ability1, Ability2, Ability3, Ability4 } from "../../BLL/images/svgstorage";
+import * as HA from "../../BLL/images/svgstorage";
 
 const HeroesStyled = styled.div`
 width: 100%;
@@ -58,10 +58,10 @@ const Hero:FC = ()=>{
       <div className="background">
         <img className="image" src={heroImage}/>
         <div className="abilities">
-          <Ability1/>
-          <Ability2/>
-          <Ability3/>
-          <Ability4/>
+          <HA.Hero1Ability1/>
+          <HA.Hero1Ability2/>
+          <HA.Hero1Ability3/>
+          <HA.Hero1Ability4/>
         </div>
       </div>
     </HeroStyled>
