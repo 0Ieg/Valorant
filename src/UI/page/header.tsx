@@ -10,6 +10,7 @@ background-color: var(--color-black);
 display: flex;
 align-items: center;
 justify-content: space-between;
+font-family: Montserrat;
 .header__left{
   display: flex;
   align-items: center;

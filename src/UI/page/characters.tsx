@@ -18,10 +18,10 @@ export const Heroes:FC = ()=>{
   return(
     <HeroesStyled>
       <div className="empty"></div>
-      <Hero/>
-      <Hero/>
-      <Hero/>
-      <Hero/>
+      <Hero name='Phoenix'/>
+      <Hero name='Jett'/>
+      <Hero name='Sova'/>
+      <Hero name='Sage'/>
     </HeroesStyled>
   )
 }
@@ -50,9 +50,16 @@ overflow: visible;
     bottom: -10px;
     left: 50px;
   }
+  .name{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 26px;
+  }
 }
 `
-const Hero:FC = ()=>{
+const Hero:FC<{name:String}> = (props)=>{
+  const {name} = props
   return(
     <HeroStyled>
       <div className="background">
@@ -63,6 +70,7 @@ const Hero:FC = ()=>{
           <HA.Hero1Ability3/>
           <HA.Hero1Ability4/>
         </div>
+        <div className="name">{name}</div>
       </div>
     </HeroStyled>
   )

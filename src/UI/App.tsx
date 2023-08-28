@@ -79,7 +79,9 @@ z-index: 1;
   .title{
     font-size: 24px;
     font-weight: 700;
+    letter-spacing: 1.5px;
     color: var(--color-white);
+    font-family: Montserrat;
   }
   &:hover .logo{
     transform: rotate(360deg);
