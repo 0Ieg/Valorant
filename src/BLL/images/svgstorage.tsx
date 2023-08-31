@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 
 const AbilityStyled = styled.svg.attrs({width:53, height:72, xmlns:"http://www.w3.org/2000/svg"})`
 path{
-  fill: #F8F8F8;
+  
   // fill="#1F2326"
 }
 `
