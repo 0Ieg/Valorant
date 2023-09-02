@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { styled } from 'styled-components'
 import back from '../../BLL/images/background.png'
 import { Heroes } from './characters'
+import { Abilities } from './abilities'
 
 const MainStyled = styled.main`
 background-color: var(--color-red);
@@ -72,6 +73,7 @@ export const Main:FC = ()=>{
       <div className="line_2"></div>
       <div className="line_3"></div>
       <Heroes/>
+      <Abilities/>
     </MainStyled>
   )
 }
