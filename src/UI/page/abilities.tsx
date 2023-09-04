@@ -54,14 +54,14 @@ position: relative;
 cursor: pointer;
 .level {
   font-size: 24px;
-  font-weight: 700;
-  font-family: Montserrat;
+  font-family: DrukWide;
   color: var(--color-gray);
   padding-bottom: 10px;
   transition: color 0.2s linear;
 }
 .title {
-  font-size: 20px;
+  font-family: DrukWide;
+  font-size: 14px;
   padding-bottom: 10px;
 }
 .description {

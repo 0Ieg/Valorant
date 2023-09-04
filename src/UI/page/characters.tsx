@@ -4,13 +4,14 @@ import heroAvatar from "../../BLL/images/Art_1.png"
 import * as HA from "../../BLL/images/svgstorage";
 
 const HeroesStyled = styled.div`
+height: 415px;
 width: 100%;
 padding: 0 70px 0 250px;
 display: flex;
 justify-content: space-between;
 position: relative;
-top: 70px;
 overflow: visible;
+margin: 70px 0 60px;
 `
 export const Heroes:FC = ()=>{
   return(
@@ -27,7 +28,7 @@ export const Heroes:FC = ()=>{
 
 const HeroStyled = styled.div`
 overflow: visible;
-height: 415px;
+height: 100%;
 width: 250px;
 position: relative;
 .image{
@@ -69,18 +70,27 @@ position: relative;
     }
 }
 .information{
-    position: relative;
-    z-index: 4;
-    top: -320px;
-    left: -110px;
-    transform: rotate(90deg);
-    .country{
-      color: var(--color-red);
-      font-size: 22px;
-    }
-    .name{
-      font-size: 63px;
-    }
+  font-family: DrukWide;
+  position: relative;
+  z-index: 4;
+  top: -320px;
+  left: -110px;
+  transform: rotate(90deg);
+  .country{
+    color: var(--color-red);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .name{
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+}
+&:hover{
+  .name{
+    color: var(--color-red);
+  }
 }
 `
 const Hero:FC<{name:String,country:String, avatar:any}> = (props)=>{
@@ -96,7 +106,7 @@ const Hero:FC<{name:String,country:String, avatar:any}> = (props)=>{
       </div>
       <div className="information">
       <div className="country">{country}</div>
-        <div className="name">{name}</div>
+        <span className="name">{name}</span>
       </div>
     </HeroStyled>
   )
