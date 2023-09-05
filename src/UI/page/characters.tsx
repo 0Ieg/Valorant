@@ -1,12 +1,15 @@
 import { FC } from "react";
 import { styled } from "styled-components";
-import heroAvatar from "../../BLL/images/Art_1.png"
+import Phoenix from "../../BLL/images/Art_1.png"
+import Jett from "../../BLL/images/Art_2.png"
+import Sova from "../../BLL/images/Art_3.png"
+import Sage from "../../BLL/images/Art_4.png"
 import * as HA from "../../BLL/images/svgstorage";
 
 const HeroesStyled = styled.div`
 height: 415px;
 width: 100%;
-padding: 0 70px 0 250px;
+padding-left: 180px;
 display: flex;
 justify-content: space-between;
 position: relative;
@@ -17,10 +20,10 @@ export const Heroes:FC = ()=>{
   return(
     <HeroesStyled>
       <div className="empty"></div>
-      <Hero name='Phoenix' country={'United Kingdom'} avatar={heroAvatar}/>
-      <Hero name='Jett' country={'South Korea'} avatar={heroAvatar}/>
-      <Hero name='Sova' country={'Russia'} avatar={heroAvatar}/>
-      <Hero name='Sage' country={'China'} avatar={heroAvatar}/>
+      <Hero name='Phoenix' country={'United Kingdom'} avatar={Phoenix}/>
+      <Hero name='Jett' country={'South Korea'} avatar={Jett}/>
+      <Hero name='Sova' country={'Russia'} avatar={Sova}/>
+      <Hero name='Sage' country={'China'} avatar={Sage}/>
     </HeroesStyled>
   )
 }
@@ -31,6 +34,7 @@ overflow: visible;
 height: 100%;
 width: 250px;
 position: relative;
+cursor: pointer;
 .image{
     width: 100%;
     height: 100%;
@@ -62,7 +66,7 @@ position: relative;
         transition: fill 0.2s linear;
       }
       :hover{
-        fill: red;
+        fill: var(--color-red);
       }
     }
     &:hover{
@@ -85,6 +89,7 @@ position: relative;
     font-size: 40px;
     color: transparent;
     -webkit-text-stroke: 1px white;
+    transition: color 0.2s linear;
   }
 }
 &:hover{

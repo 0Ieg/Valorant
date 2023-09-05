@@ -10,6 +10,7 @@ background-image: url(${back});
 background-size: cover;
 flex-grow: 1;
 position: relative;
+padding: 0 70px;
 .agents{
   width: 50px;
   position: absolute;
