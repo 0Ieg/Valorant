@@ -1,10 +1,13 @@
 import { FC } from "react";
 import { styled } from "styled-components";
 import { Hero4Ability1, Hero4Ability3, Hero4Ability4 } from "../../BLL/images/svgstorage";
+import { Link } from "react-router-dom";
 
 const AbilitiesStyled = styled.div`
 display: flex;
 justify-content: space-between;
+position: relative;
+z-index: 4;
 .right{
   height: 150px;
   width: 140px;
@@ -97,11 +100,13 @@ export const Ability:FC<{level:String,title:String,description:String, Image:any
   const {level, title, description, Image} = props
   return(
     <AbilityStyled>
-      <div className="level">{level}</div>
-      <div className="title">{title}</div>
-      <div className="description">{description}</div>
-      <div className="square"></div>
-      <div className="image"><Image/></div>
+      <Link to={`${level.toLowerCase()}`}>
+        <div className="level">{level}</div>
+        <div className="title">{title}</div>
+        <div className="description">{description}</div>
+        <div className="square"></div>
+        <div className="image"><Image/></div>
+      </Link>
     </AbilityStyled>
   )
 }

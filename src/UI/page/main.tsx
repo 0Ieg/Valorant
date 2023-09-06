@@ -55,6 +55,15 @@ padding: 0 70px;
   top: 35px;
   right: 300px;
 }
+.whiteFooter{
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: var(--color-white);
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
 `
 export const Main:FC = ()=>{
   return(
@@ -75,6 +84,7 @@ export const Main:FC = ()=>{
       <div className="line_3"></div>
       <Heroes/>
       <Abilities/>
+      <div className="whiteFooter"></div>
     </MainStyled>
   )
 }

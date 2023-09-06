@@ -5,6 +5,7 @@ import Jett from "../../BLL/images/Art_2.png"
 import Sova from "../../BLL/images/Art_3.png"
 import Sage from "../../BLL/images/Art_4.png"
 import * as HA from "../../BLL/images/svgstorage";
+import { Link } from "react-router-dom";
 
 const HeroesStyled = styled.div`
 height: 415px;
@@ -102,17 +103,19 @@ const Hero:FC<{name:String,country:String, avatar:any}> = (props)=>{
   const { name, country, avatar } = props
   return(
     <HeroStyled>
-      <img className="image" src={avatar}/>
-      <div className="abilities">
-        <div className="ability"><HA.Hero1Ability1/></div>
-        <div className="ability"><HA.Hero1Ability2/></div>
-        <div className="ability"><HA.Hero1Ability3/></div>
-        <div className="ability"><HA.Hero1Ability4/></div>
-      </div>
-      <div className="information">
-      <div className="country">{country}</div>
-        <span className="name">{name}</span>
-      </div>
+      <Link to={`${name.toLowerCase()}`}>
+        <img className="image" src={avatar}/>
+        <div className="abilities">
+          <div className="ability"><HA.Hero1Ability1/></div>
+          <div className="ability"><HA.Hero1Ability2/></div>
+          <div className="ability"><HA.Hero1Ability3/></div>
+          <div className="ability"><HA.Hero1Ability4/></div>
+        </div>
+        <div className="information">
+        <div className="country">{country}</div>
+          <span className="name">{name}</span>
+        </div>
+      </Link>
     </HeroStyled>
   )
 }

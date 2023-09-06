@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { styled } from 'styled-components'
 import { Header } from './header'
 import { Main } from './main'
-import { Footer } from './footer'
 
 const PageStyled = styled.div`
 width: 100%;
@@ -17,7 +16,6 @@ export const Page:FC = ()=>{
     <PageStyled>
       <Header/>
       <Main/>
-      <Footer/>
     </PageStyled>
   )
 }
